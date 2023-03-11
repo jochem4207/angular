@@ -1,0 +1,9 @@
+<p>weather works!</p>
+<ul>
+    <li *ngFor="let weather of weatherList">
+        <button type="button"  (click)="onSelect(weather)">
+            The weather on <span>{{weather.day}}</span> is <span>{{weather.degrees}} degrees</span>
+        </button>
+    </li>
+</ul>
+<app-weather-detail [weather]="selectedWeather"></app-weather-detail>

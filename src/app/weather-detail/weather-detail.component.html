@@ -1,0 +1,8 @@
+<div *ngIf="weather">
+    {{weather.day}} it is {{weather.degrees}} degrees!
+
+    <div>
+        <label for="degrees">change the weather for {{weather.day}}</label>
+        <input id="degrees" [(ngModel)]="weather.degrees" placeholder="degrees">
+    </div>
+</div>
