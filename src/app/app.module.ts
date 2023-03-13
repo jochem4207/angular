@@ -7,6 +7,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WeatherDetailComponent } from './weather-detail/weather-detail.componen
     HeroesComponent,
     WeatherComponent,
     HeroDetailComponent,
-    WeatherDetailComponent
+    WeatherDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
