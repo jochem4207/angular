@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Weather } from '../interface/weather';
 import { WEATHER } from '../mock/weather';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-weather',
@@ -9,6 +10,8 @@ import { WEATHER } from '../mock/weather';
 })
 
 export class WeatherComponent {
+  constructor(private messageService: MessageService) { }
+
   // Mockdata
   weatherList = WEATHER
 
@@ -17,5 +20,6 @@ export class WeatherComponent {
   selectedWeather?: Weather;
   onSelect(weather: Weather) {
     this.selectedWeather = weather;
+    this.messageService.add(`heroescomponent: selected hero is=${weather.day}`);
   }
 }
