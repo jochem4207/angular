@@ -33,6 +33,13 @@ export class HeroDetailComponent implements OnInit {
     this.messageService.add(`get hero details from hero ${idParam}`)
   }
 
+  save():void {
+    if(this.hero){
+      this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack())
+    }
+  }
+
   goBack(): void{
     this.location.back();
   }
